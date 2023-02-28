@@ -1076,8 +1076,8 @@ def train():
             print('Saved test set')
 
             filenames = [os.path.join(testsavedir, '{:03d}.png'.format(k)) for k in range(len(i_test))]
-
-            test_loss = img2mse(torch.Tensor(rgbs), images[i_test])
+            images_cpu = images.cpu()
+            test_loss = img2mse(torch.Tensor(rgbs), images_cpu[i_test])
             test_psnr = mse2psnr(test_loss)
 
     
