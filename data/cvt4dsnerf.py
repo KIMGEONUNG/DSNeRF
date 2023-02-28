@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import argparse
 import numpy as np
 from PIL import Image
@@ -17,8 +19,8 @@ files = [
 def parse():
 
     p = argparse.ArgumentParser()
-    p.add_argument('--depth', default='teddy_depth.png')
-    p.add_argument('--image', default='teddy_img.png')
+    p.add_argument('--depth', required=True)
+    p.add_argument('--image', required=True)
     return p.parse_args()
 
 
