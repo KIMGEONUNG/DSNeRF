@@ -649,6 +649,22 @@ def train():
             near = 0.
             far = 1.
         print('NEAR FAR', near, far)
+    elif args.dataset_type == 'co3d':  # OURS #
+        train_imgs, test_imgs, train_poses, test_poses, render_poses, depth_gts, bds = load_colmap_llff(args.datadir)
+        poses = np.concatenate([train_poses, test_poses], axis=0)
+        images = np.concatenate([train_imgs, test_imgs], axis=0)
+        hwf = train_poses[0, :3, -1]
+        train_poses = train_poses[:, :3, :4]
+        test_poses = test_poses[:, :3, :4]
+        poses = poses[:, :3, :4]
+        print('Loaded colmap llff', images.shape, render_poses.shape, hwf, args.datadir)
+        i_train = list(range(train_poses.shape[0]))
+        i_test = list(range(train_poses.shape[0], poses.shape[0]))
+        i_val = i_test
+        print('DEFINING BOUNDS')
+        near = 1.
+        far = 6.
+        print('NEAR FAR', near, far)
     elif args.dataset_type == 'llff':
         if args.colmap_depth:
             depth_gts = load_colmap_depth(args.datadir, factor=args.factor, bd_factor=.75)

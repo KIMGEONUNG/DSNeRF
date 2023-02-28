@@ -1,0 +1,30 @@
+{
+    "configurations": {
+        "run": {
+            "adapter": "debugpy",
+            "configuration": {
+                "request": "launch",
+                "type": "python",
+                "cwd": "${workspaceRoot}",
+                "program": "run_nerf.py",
+                "args": [
+                    "--config",
+                    "configs/co3d.txt"
+                ],
+                "stopOnEntry": true,
+                "console": "integratedTerminal",
+                "env": {
+                    "CONDA_VISIBLE_DEVICES": "0"
+                },
+                "justMyCode": true
+            },
+            "breakpoints": {
+                "exception": {
+                    "raised": "N",
+                    "uncaught": "",
+                    "userUnhandled": ""
+                }
+            }
+        }
+    }
+}

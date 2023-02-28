@@ -1,0 +1,30 @@
+{
+    "configurations": {
+        "run": {
+            "adapter": "debugpy",
+            "configuration": {
+                "request": "launch",
+                "type": "python",
+                "cwd": "${workspaceRoot}",
+                "program": "${file}",
+                "args": [
+                    "--config",
+                    "configs/fern_2v_cp.txt"
+                ],
+                "stopOnEntry": true,
+                "console": "integratedTerminal",
+                "env": {
+                    "CONDA_VISIBLE_DEVICES": "0"
+                },
+                "justMyCode": true
+            },
+            "breakpoints": {
+                "exception": {
+                    "raised": "N",
+                    "uncaught": "",
+                    "userUnhandled": ""
+                }
+            }
+        }
+    }
+}
