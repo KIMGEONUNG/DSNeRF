@@ -138,7 +138,7 @@ dmypy.json
 cython_debug/
 
 logs
-data
+data/split_allview_npy
 wandb
 scripts
 web

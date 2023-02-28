@@ -451,5 +451,5 @@ def load_colmap_llff(basedir):
 
     return train_imgs, test_imgs, train_poses, test_poses, video_poses, depth_data, bds
 
-    
+
 
