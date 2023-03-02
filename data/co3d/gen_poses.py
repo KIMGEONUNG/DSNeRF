@@ -19,9 +19,9 @@ focal = 332
 for i in range(num):
 
     mat = np.zeros((3, 5))
-    mat[0,4] = size
-    mat[1,4] = size
-    mat[2,4] = focal
+    mat[0, 4] = size
+    mat[1, 4] = size
+    mat[2, 4] = focal
 
     radian = pi / num * i
     tx = radius * np.sin(radian)
@@ -43,7 +43,7 @@ for i in range(num):
     mat[2, 3] = tz
     # print(mat)
 
-    frames.append(mat[None,...])
+    frames.append(mat[None, ...])
 
 frames = np.row_stack(frames)
 np.save(path, frames)
