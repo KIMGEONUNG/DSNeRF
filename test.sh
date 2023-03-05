@@ -8,4 +8,4 @@ if [[ -z $1 ]]; then
   exit 1
 fi
 
-python run_nerf.py --config $1 --render_only
+python run_nerf.py --config $1 --render_only --white_bkgd
