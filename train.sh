@@ -14,4 +14,4 @@ if ! [[ -f $1 ]]; then
   exit 1
 fi
 
-python run_nerf.py --config $1
+python run_nerf.py --config $1 --white_bkgd
