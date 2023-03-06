@@ -1,6 +1,6 @@
-expname = backpackB
+expname = teddybearB
 basedir = ./logs/co3d
-datadir = ./data/backpackB
+datadir = ./data/teddybearB
 dataset_type = co3d
 factor = 4
 llffhold = 8
